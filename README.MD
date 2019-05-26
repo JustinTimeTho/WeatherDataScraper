@@ -1,15 +1,23 @@
 Project Goals
 
+
 Detroit Weather Data: https://www.wunderground.com/history/daily/us/mi/detroit/KDET/date/2019-5-25
+
 Atlanta Weather Data: https://www.wunderground.com/history/daily/us/ga/atlanta/KATL/date/2000-5-25
 
 Notes:
+
 Wundergronud has an offset of 8 hrs ahead or 4 hrs behind for ATL and DET
+
 Date works as 2019-5-24 OR 2019-05-24
 
+
 Naming conventions:
+
   Variables are camel case, starting with the first letter being capital
+  
   Files and functions are underscore_separated
+
 
 1. Webscrape a single page () with BeautifulSoup to extract and save data from a single day to a CSV file
 2. Use strings to dynamically get data from Detroit or Atlanta (links above)
