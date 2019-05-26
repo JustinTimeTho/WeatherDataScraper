@@ -20,8 +20,8 @@ Naming conventions:
 7. Put data into an SQL server
 
 Requirements:
-  BeautifulSoup
-  Pip
+  BeautifulSoup4
+  Pip3
   selenium
   This code to add gecko to path:
             ## Geckodriver
