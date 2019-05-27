@@ -35,6 +35,5 @@ def parser(url, date, location):
         TempList.append(RawWeatherData[i].text.strip().replace('\n',''))
     TempList.append(date)
     WeatherDataTable.append(TempList.copy()) #was missing the last data point
-    WeatherDataTable.append(CategoriesList)
     save_csv(WeatherDataTable, location, CategoriesList)
     return None
