@@ -22,7 +22,7 @@ def parser(url, date, location):
     CategoriesList = []
     for str in RawCategories:
         CategoriesList.append(str.text.strip())
-    CategoriesList.append(date)
+    CategoriesList.append('Date')
 
     RawWeatherData = soup.select('#history-observation-table tbody tr td')#gets all values within the Daily Observations Table
     WeatherDataTable = []
@@ -35,6 +35,6 @@ def parser(url, date, location):
         TempList.append(RawWeatherData[i].text.strip().replace('\n',''))
     TempList.append(date)
     WeatherDataTable.append(TempList.copy()) #was missing the last data point
-    # print(WeatherDataTable)
-    save_csv(WeatherDataTable, location)
+    WeatherDataTable.append(CategoriesList)
+    save_csv(WeatherDataTable, location, CategoriesList)
     return None
